@@ -33,15 +33,21 @@ const array = [
 ];
 
 const arrayCopia = array.map((element, index) => {
-    return element
+    const copyElement = {
+        ...element,
+        position: stringGen(1)
+    };
+    return copyElement
 });
+
+
+
+// arrayCopia.forEach((item, i) => {
+//     item['position'] = stringGen(1);
+// });
+
 console.log(arrayCopia);
-
-arrayCopia.forEach((item, i) => {
-    item.position = stringGen(1);
-});
-
-
+console.log(array);
 
 // const arrayCopia = [];
 //
