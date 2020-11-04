@@ -3,6 +3,16 @@
 //aggiungere ai singoli elementi dell'array una nuova proprietà "position"
 // che contiene una lettera casuale.
 
+const stringGen = (len) => {
+    let text = "";
+
+    let charset = "abcdefghijklmnopqrstuvwxyz";
+
+    for (let i = 0; i < len; i++)
+    text += charset.charAt(Math.floor(Math.random() * charset.length));
+
+    return text;
+}
 
 const array = [
         {
@@ -34,16 +44,6 @@ arrayCopia.forEach((item, i) => {
 
 
 // const arrayCopia = [];
-const stringGen = (len) => {
-    let text = "";
-
-    let charset = "abcdefghijklmnopqrstuvwxyz";
-
-    for (let i = 0; i < len; i++)
-      text += charset.charAt(Math.floor(Math.random() * charset.length));
-
-    return text;
-}
 //
 // for (let i = 0; i < array.length; i++) {
 //
