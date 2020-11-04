@@ -3,41 +3,26 @@
 // ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 // Stampare a schermo la bici con peso minore.
 
-const arrayBici = [
-    {
-        nome: 'vektor',
-        peso: 8
-    },
-    {
-        nome: 'aliens',
-        peso: 10
-    },
-    {
-        nome: 'atala',
-        peso: 9
-    }
-];
+const vektor = {nome: 'vektor', peso: 10}
+const aliens = {nome: 'aliens', peso: 14}
+const atala = {nome: 'atala', peso: 16}
 
+const arrayBici = [vektor, aliens, atala];
 console.log(arrayBici);
 
-let pesoMinimo = arrayBici[0]['peso'];
-let biciPesoMinimo = arrayBici[0]['nome'];
-let pesoCorrente;
-let biciCorrente;
 
-arrayBici.forEach((bici, i) => {
+let biciLeggera = arrayBici[0];
 
-    pesoCorrente = bici['peso'];
-    biciCorrente = bici['nome'];
+arrayBici.forEach((bici) => {
 
-    if(pesoCorrente < pesoMinimo){
-        pesoMinimo = pesoCorrente;
-        biciPesoMinimo = biciCorrente;
+    if(bici.peso < biciLeggera.peso){
+
+        biciLeggera = element;
     }
 });
-console.log(pesoMinimo);
-console.log(biciPesoMinimo);
+
+const {peso, nome} = biciLeggera;
 console.log(
     `
-     La bici con peso minore si chiama : ${biciPesoMinimo} ed ha il peso di: ${pesoMinimo}kg
+     La bici con peso minore si chiama: ${nome} ed ha il peso di: ${peso}kg
     `);
